@@ -215,7 +215,6 @@ export class FireService {
   docWithRefs$<T>(ref: DocPredicate<T>) {
     return this.doc$(ref).pipe(
       map((doc: T | any) => {
-        this.logger.log('doc ==>  ' + ref + ' => ', doc);
         for (const k of Object.keys(doc)) {
           if (doc[k] instanceof firebase.default.firestore.DocumentReference) {
             doc[k] = this.doc(doc[k].path);

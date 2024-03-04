@@ -1,40 +1,56 @@
 <div class="card">
   <div class="circle">
-    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Avatar">
-
+    <img
+      [src]="
+        data.photo ||
+        'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'
+      "
+      alt="Avatar"
+    />
   </div>
-<div class="body">
-  <div class="name">
-<strong>John Doe</strong>
+  <div class="body">
+    <div class="name">
+      <strong>{{ data.name }}</strong>
+    </div>
+    <div class="title">
+      <strong>{{ data.position }}</strong>
+    </div>
+
+    <div class="bio">
+      <p>
+        {{ data.bio }}
+      </p>
+      <div class="social">
+        <img
+          src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+          alt=""
+        />
+        <img
+          src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+          alt=""
+        />
+        <img
+          src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+          alt=""
+        />
+        <img
+          src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+          alt=""
+        />
+        <img
+          src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+          alt=""
+        />
+        <img
+          src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="mesages">
+      <button (click)="openDialog()" mat-fab extended color="primary">
+        <span class="text-message">Send message</span> <mat-icon>send</mat-icon>
+      </button>
+    </div>
   </div>
-  <div class="title">
-<strong>Software Developer</strong>
-
-  </div>
-
-  <div class="bio">
-<p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident veritatis illo aperiam accusamus quasi cum
-  perspiciatis omnis voluptatibus dolore culpa ad unde nam dolorum laudantium nemo cumque illum, hic eligendi.
-</p>
-<div class="social">
-  <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="">
-  <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="">
-  <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="">
-  <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="">
-  <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="">
-  <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="">
- 
-</div>
-  </div>
-  <div class="mesages ">
-
-    <button (click)="openDialog()"  mat-fab extended color="primary">
-
-      <span class="text-message">Send message</span>  <mat-icon>send</mat-icon>
-    </button>
-  </div>
-
-
-</div>
 </div>

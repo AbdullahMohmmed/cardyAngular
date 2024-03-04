@@ -1,0 +1,27 @@
+.container {
+  @apply flex items-center justify-center max-w-full h-full my-0 mx-auto bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-green-200 via-green-300 to-blue-500;
+}
+.card {
+  @apply min-h-[550px] max-w-[450px] p-5 w-[90%] lg:w-full bg-neutral-50 rounded-xl shadow-md flex  items-center text-center mx-auto flex-col m-5;
+}
+.card h1 {
+  @apply text-3xl mt-5 mb-5 text-cyan-600;
+}
+.example-form {
+  min-width: 150px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 10px;
+  justify-content: center;
+
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}

@@ -1,0 +1,26 @@
+<section class="container">
+  <div class="card">
+    <h1><strong>Cardy SignUp</strong></h1>
+    <form [formGroup]="form" class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          formControlName="email"
+          placeholder="Ex.abdullah@gmail.com"
+        />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>username</mat-label>
+        <input matInput formControlName="username" placeholder="@superman" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input formControlName="password" matInput placeholder="Ex. Aa12345" />
+      </mat-form-field>
+      <button (click)="signup()" mat-fab extended color="primary">
+        SignUp
+      </button>
+    </form>
+  </div>
+</section>

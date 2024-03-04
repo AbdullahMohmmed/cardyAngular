@@ -1,0 +1,32 @@
+<div class="card" [formGroup]="form">
+  <div class="group" data-number="2">
+    <mat-form-field class="">
+      <input matInput formControlName="name" placeholder="Name" />
+    </mat-form-field>
+    <mat-form-field class="">
+      <input matInput formControlName="position" placeholder="position" />
+    </mat-form-field>
+  </div>
+
+  <div class="group" data-number="1">
+    <mat-form-field class="example-full-width">
+      <textarea matInput formControlName="bio" placeholder="bio" rows="3">
+      </textarea>
+    </mat-form-field>
+  </div>
+  <div class="group" data-number="2">
+    <mat-form-field class="">
+      <input matInput formControlName="phone" placeholder="phone" />
+    </mat-form-field>
+    <mat-form-field class="">
+      <input matInput formControlName="email" placeholder="email" />
+    </mat-form-field>
+  </div>
+  <div class="group" data-number="1">
+    <mat-form-field class="">
+      <input matInput formControlName="username" placeholder="username" />
+    </mat-form-field>
+  </div>
+
+  <button mat-raised-button color="primary" (click)="update()">update</button>
+</div>

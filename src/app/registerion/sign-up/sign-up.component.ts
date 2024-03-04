@@ -11,10 +11,10 @@ import {
   Validators,
 } from '@angular/forms';
 import { AuthService } from '../../shared/service/auth.service';
-import { LoginCredential } from '../../shared/types/user.type';
+import { RegisterCredential } from '../../shared/types/user.type';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-signup',
   standalone: true,
   imports: [
     FormsModule,
@@ -23,21 +23,25 @@ import { LoginCredential } from '../../shared/types/user.type';
     ReactiveFormsModule,
     MatButtonModule,
   ],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css',
+  templateUrl: './sign-up.component.html',
+  styleUrl: './sign-up.component.css',
 })
-export class LoginComponent {
-  private userSrv = inject(AuthService);
-  profileForm = new FormGroup({
+export class SignupComponent {
+  form = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [
       Validators.required,
       Validators.minLength(6),
     ]),
+    username: new FormControl('', [
+      Validators.required,
+      Validators.minLength(6),
+    ]),
   });
-  login() {
-    const { email, password } =
-      this.profileForm.getRawValue() as LoginCredential;
-    this.userSrv.login({ email, password }).subscribe();
+  private userSrv = inject(AuthService);
+
+  signup() {
+    const value = this.form.getRawValue() as RegisterCredential;
+    this.userSrv.signUp(value).subscribe();
   }
 }
