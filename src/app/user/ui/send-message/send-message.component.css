@@ -1,0 +1,12 @@
+.example-form{
+@apply flex-col min-w-[650px] max-w-[650px] w-full w-[100%] mx-5 my-5
+}
+
+.message
+{
+  @apply w-full flex-col
+}
+.name
+{
+  @apply w-full flex-col
+}

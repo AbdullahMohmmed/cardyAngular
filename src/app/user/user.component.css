@@ -1,0 +1,27 @@
+mat-toolbar {
+  display: flex;
+  align-items: center;
+}
+mat-drawer nav{
+@apply flex flex-col items-start;
+}
+mat-toolbar nav {
+  @apply ms-auto hidden lg:flex;
+}
+
+.navSide {
+  @apply ms-auto lg:hidden flex;
+}
+
+
+mat-drawer-container {
+  @apply h-full bg-stone-100;
+}
+
+
+
+
+.container {
+
+  @apply flex items-center justify-center max-w-full h-full my-0 mx-auto bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-green-200 via-green-300 to-blue-500;
+}

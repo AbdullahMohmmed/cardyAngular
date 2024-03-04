@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cardy362000": {
+      "hosting": {
+        "cardy": [
+          "cardy362000"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cardy362000"
+  }
+}
