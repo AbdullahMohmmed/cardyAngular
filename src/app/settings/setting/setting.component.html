@@ -1,0 +1,94 @@
+<section class="p-6">
+  <div class="grid gap-2 p-4" [formGroup]="formGroup">
+    <div class="grid grid-cols-[7fr_3fr] gap-2">
+      <mat-form-field appearance="outline" class="small w-full">
+        <!-- <mat-label>Full Name</mat-label> -->
+        <input matInput formControlName="name" placeholder="Full Name" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="small w-full">
+        <input matInput formControlName="dob" [matDatepicker]="picker" />
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <!-- <mat-form-field class="small" appearance="outline">
+        <input matInput [matDatepicker]="picker" formControlName="dob" />
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field> -->
+    </div>
+    <div class="grid grid-cols-2 gap-2">
+      <mat-form-field appearance="outline" class="small w-full">
+        <!-- <mat-label>User Name</mat-label> -->
+        <input matInput formControlName="userName" placeholder="User Name" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="small w-full">
+        <!-- <mat-label>Jop title</mat-label> -->
+        <input matInput formControlName="jobTitle" placeholder="Jop title" />
+      </mat-form-field>
+    </div>
+    <mat-form-field appearance="outline" class="small w-full">
+      <!-- <mat-label>Bio</mat-label> -->
+      <textarea matInput formControlName="bio" placeholder="Bio"></textarea>
+    </mat-form-field>
+
+    <div class="grid grid-cols-[6fr_4fr_3fr] gap-2">
+      <mat-form-field appearance="outline" class="small w-full">
+        <!-- <mat-label>Email</mat-label> -->
+        <input matInput formControlName="email" placeholder="Email" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="small w-full">
+        <!-- <mat-label>Mobile</mat-label> -->
+        <input matInput formControlName="mobile" placeholder="Mobile" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="small w-full">
+        <!-- <mat-label>City</mat-label> -->
+        <input matInput formControlName="city" placeholder="City" />
+      </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="outline" class="small w-full">
+      <!-- <mat-label>Password</mat-label> -->
+      <input matInput formControlName="password" placeholder="Password" />
+    </mat-form-field>
+
+    <div class="grid grid-cols-2 gap-2">
+      <mat-form-field appearance="outline" class="small w-full">
+        <!-- <mat-label>Instagram</mat-label> -->
+        <input matInput formControlName="insta" placeholder="Instagram" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="small w-full">
+        <!-- <mat-label>Twitter</mat-label> -->
+        <input matInput formControlName="twitter" placeholder="Twitter" />
+      </mat-form-field>
+    </div>
+    <div class="grid grid-cols-2 gap-2">
+      <mat-form-field appearance="outline" class="small w-full">
+        <!-- <mat-label>Github</mat-label> -->
+        <input matInput formControlName="github" placeholder="Github" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="small w-full">
+        <!-- <mat-label>Linkedin</mat-label> -->
+        <input matInput formControlName="linkedin" placeholder="Linkedin" />
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="w-full text-center">
+    <button mat-raised-button class="w-[8rem]" color="primary" (click)="save()">
+      Save
+    </button>
+  </div>
+</section>

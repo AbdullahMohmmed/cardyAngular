@@ -2,28 +2,36 @@
   <mat-drawer #drawer mode="over">
     <nav>
       <a mat-button routerLink="info-card"><mat-icon>home</mat-icon>Home</a>
-      <a mat-button routerLink="info-card"><mat-icon>settings</mat-icon>Settings</a>
-      <a mat-button routerLink="info-card"><mat-icon>dashboard</mat-icon>Dashboard</a>
+      <a mat-button routerLink="info-card"
+        ><mat-icon>settings</mat-icon>Settings</a
+      >
+      <a mat-button routerLink="info-card"
+        ><mat-icon>dashboard</mat-icon>Dashboard</a
+      >
     </nav>
-
   </mat-drawer>
 
   <mat-toolbar color="">
     <span>Cardy</span>
     <!-- <a class="logo" mat-button routerLink="info-card">Cardy</a> -->
 
-    <button class="navSide" mat-icon-button aria-label="Example icon button with a open in new tab icon"
-      (click)="drawer.toggle()">
+    <button
+      class="navSide"
+      mat-icon-button
+      aria-label="Example icon button with a open in new tab icon"
+      (click)="drawer.toggle()"
+    >
       <mat-icon>menu</mat-icon>
     </button>
     <nav>
       <a mat-button routerLink="info-card"><mat-icon>home</mat-icon>Home</a>
-      <a mat-button routerLink="info-card"><mat-icon>settings</mat-icon>Settings</a>
-      <a mat-button routerLink="info-card"><mat-icon>dashboard</mat-icon>Dashboard</a>
-
+      <a mat-button (click)="setting()"
+        ><mat-icon>settings</mat-icon>Settings</a
+      >
+      <a mat-button routerLink="info-card"
+        ><mat-icon>dashboard</mat-icon>Dashboard</a
+      >
     </nav>
-
-
   </mat-toolbar>
   <section class="container">
     <app-info-card></app-info-card>
