@@ -23,7 +23,7 @@ img{
   @apply text-sm mt-5;
 }
 .social {
-  @apply mt-5  mx-3  flex  justify-center flex-wrap ;
+  @apply mt-5  mx-5 mb-5 flex  justify-center flex-wrap ;
 }
 .social img {
   @apply h-6  w-6 h-full rounded-full object-cover mx-1 my-1 ;
